@@ -13,8 +13,8 @@ int win() {
 void save_user_entry(char *argv) {
     int a = 8;
     char buffer[12];
-    strncpy(buffer,argv,12);
-    //strcpy(buffer, argv);
+    //strncpy(buffer,argv,12);
+    strcpy(buffer, argv);
 }
 
 int main(int argc, char *argv[]) {

@@ -20,6 +20,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       # Python3 et Pwntools
       python3 \
       python3-pip \
+      file \
     && pip3 install --no-cache-dir pwntools \
     && rm -rf /var/lib/apt/lists/*
 
