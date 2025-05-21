@@ -20,9 +20,13 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
       # Python3 et Pwntools
       python3 \
       python3-pip \
-      file \
     && pip3 install --no-cache-dir pwntools \
     && rm -rf /var/lib/apt/lists/*
+
+RUN dpkg --add-architecture i386 && \
+    apt update && \
+    apt install -y libc6:i386 libncurses5:i386 libstdc++6:i386
+
 
 # Montez votre dossier ./shared ici
 VOLUME ["/shared"]
